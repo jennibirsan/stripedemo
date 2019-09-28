@@ -51,19 +51,21 @@ body {
   justify-content: space-between;
   width: 100%;
   height: 80px;
-  background: #fff url(/images/logo.svg) center center no-repeat;
+  /* background: #fff url(/images/gold.png) center center no-repeat; */
   border-bottom: 1px solid #f3f3ff;
+  font-family: 'Raleway', sans-serif;
 }
 
 .header a.shop,
 .header a.github {
   margin: 30px;
-  font-size: 13px;
+  font-size: 20px;
   font-weight: 500;
-  color: #666ee8;
+  color: #CABCB0;
   letter-spacing: 0.3px;
   text-transform: uppercase;
   text-decoration: none;
+  font-family: 'Raleway', sans-serif;
 }
 
 /* .header a.github {
@@ -1077,6 +1079,7 @@ button:active {
 #summary .line-item .sku {
   font-size: 14px;
   color: #8898aa;
+  font-family: 'Raleway', sans-serif;
 }
 
 #summary .line-item .count,
@@ -1086,6 +1089,7 @@ button:active {
   align-self: right;
   text-align: right;
   line-height: 24px;
+  font-family: 'Raleway', sans-serif;
 }
 
 #summary .line-item .count {
@@ -1134,6 +1138,7 @@ button:active {
 #demo p.label {
   margin: 0 0 10px;
   color: #666ee8;
+  font-family: 'Raleway', sans-serif;
 }
 
 #demo .note {
@@ -1145,6 +1150,7 @@ button:active {
 #demo p.note a,
 #demo p.note em {
   font-size: 14px;
+  font-family: 'Raleway', sans-serif;
 }
 
 #demo p.note a:hover {
@@ -1154,9 +1160,9 @@ button:active {
 .card-number {
   padding-left: 8px;
   white-space: nowrap;
-  font-family: Source Code Pro, monospace;
   color: #0d2b3e;
   font-weight: 500;
+  font-family: 'Raleway', sans-serif;
 }
 
 .card-number span {
@@ -1181,6 +1187,7 @@ button:active {
   background: #f8fbfd;
   text-align: left;
   transition: visibility 0s, opacity 0.5s linear 0.5s;
+  font-family: 'Raleway', sans-serif;
 }
 
 #main.success #confirmation,
@@ -1214,6 +1221,7 @@ button:active {
   background: #fff url(/images/order.svg) 75px center no-repeat;
   box-shadow: 0 1px 3px 0 rgba(50, 50, 93, 0.15);
   border-radius: 6px;
+  font-family: 'Raleway', sans-serif;
 }
 
 #confirmation .status.error {
