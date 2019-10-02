@@ -85,30 +85,30 @@
    */
 
   // Create a IBAN Element and pass the right options for styles and supported countries.
-  const ibanOptions = {
-    style,
-    supportedCountries: ['SEPA'],
-  };
-  const iban = elements.create('iban', ibanOptions);
+  // const ibanOptions = {
+  //   style,
+  //   supportedCountries: ['US'],
+  // };
+  // const iban = elements.create('iban', ibanOptions);
 
   // Mount the IBAN Element on the page.
-  iban.mount('#iban-element');
+  // iban.mount('#iban-element');
 
   // Monitor change events on the IBAN Element to display any errors.
-  iban.on('change', ({error, bankName}) => {
-    const ibanErrors = document.getElementById('iban-errors');
-    if (error) {
-      ibanErrors.textContent = error.message;
-      ibanErrors.classList.add('visible');
-    } else {
-      ibanErrors.classList.remove('visible');
-      if (bankName) {
-        updateButtonLabel('sepa_debit', bankName);
-      }
-    }
+  // iban.on('change', ({error, bankName}) => {
+  //   const ibanErrors = document.getElementById('iban-errors');
+  //   if (error) {
+  //     ibanErrors.textContent = error.message;
+  //     ibanErrors.classList.add('visible');
+  //   } else {
+  //     ibanErrors.classList.remove('visible');
+  //     if (bankName) {
+  //       updateButtonLabel('sepa_debit', bankName);
+  //     }
+  //   }
     // Re-enable the Pay button.
-    submitButton.disabled = false;
-  });
+  //   submitButton.disabled = false;
+  // });
 
   /**
    * Add an iDEAL Bank selection Element that matches the look-and-feel of the app.
@@ -117,12 +117,12 @@
    */
 
   // Create a iDEAL Bank Element and pass the style options, along with an extra `padding` property.
-  const idealBank = elements.create('idealBank', {
-    style: {base: Object.assign({padding: '10px 15px'}, style.base)},
-  });
+  // const idealBank = elements.create('idealBank', {
+  //   style: {base: Object.assign({padding: '10px 15px'}, style.base)},
+  // });
 
   // Mount the iDEAL Bank Element on the page.
-  idealBank.mount('#ideal-bank-element');
+  // idealBank.mount('#ideal-bank-element');
 
   /**
    * Implement a Stripe Payment Request Button Element.
@@ -286,10 +286,10 @@
         }
       );
       handlePayment(response);
-    } else if (payment === 'sepa_debit') {
+    } else if (payment === 'card') {
       // Confirm the PaymentIntent with the IBAN Element and additional SEPA Debit source data.
-      const {error} = await stripe.createSource(iban, {
-        type: 'sepa_debit',
+      const {error} = await stripe.createSource( {
+        type: 'card',
         currency: 'usd',
         owner: {
           name,
@@ -323,7 +323,7 @@
         redirect: {
           return_url: window.location.href,
         },
-        statement_descriptor: 'Stripe Payments Demo',
+        statement_descriptor: 'Stripe Payments',
         metadata: {
           paymentIntent: paymentIntent.id,
         },
@@ -574,96 +574,94 @@
       countries: ['US'],
       currencies: ['usd'],
     },
-    alipay: {
-      name: 'Alipay',
-      flow: 'redirect',
-      countries: ['CN', 'HK', 'SG', 'JP'],
-      currencies: [
-        'aud',
-        'cad',
-        'eur',
-        'gbp',
-        'hkd',
-        'jpy',
-        'nzd',
-        'sgd',
-        'usd',
-      ],
-    },
-    bancontact: {
-      name: 'Bancontact',
-      flow: 'redirect',
-      countries: ['BE'],
-      currencies: ['eur'],
-    },
+    // alipay: {
+    //   name: 'Alipay',
+    //   flow: 'redirect',
+    //   countries: ['CN', 'HK', 'SG', 'JP'],
+    //   currencies: [
+    //     'aud',
+    //     'cad',
+    //     'eur',
+    //     'gbp',
+    //     'hkd',
+    //     'jpy',
+    //     'nzd',
+    //     'sgd',
+    //     'usd',
+    //   ],
+    // },
+    // bancontact: {
+    //   name: 'Bancontact',
+    //   flow: 'redirect',
+    //   countries: ['BE'],
+    //   currencies: ['eur'],
+    // },
     card: {
       name: 'Card',
       flow: 'none',
     },
-    eps: {
-      name: 'EPS',
-      flow: 'redirect',
-      countries: ['AT'],
-      currencies: ['eur'],
-    },
-    ideal: {
-      name: 'iDEAL',
-      flow: 'redirect',
-      countries: ['NL'],
-      currencies: ['eur'],
-    },
-    giropay: {
-      name: 'Giropay',
-      flow: 'redirect',
-      countries: ['DE'],
-      currencies: ['eur'],
-    },
-    multibanco: {
-      name: 'Multibanco',
-      flow: 'receiver',
-      countries: ['PT'],
-      currencies: ['eur'],
-    },
-    sepa_debit: {
-      name: 'SEPA Direct Debit',
-      flow: 'none',
-      countries: [
-        'FR',
-        'DE',
-        'ES',
-        'BE',
-        'NL',
-        'LU',
-        'IT',
-        'PT',
-        'AT',
-        'IE',
-        'FI',
-      ],
-      currencies: ['eur'],
-    },
-    sofort: {
-      name: 'SOFORT',
-      flow: 'redirect',
-      countries: ['DE', 'AT'],
-      currencies: ['eur'],
-    },
-    wechat: {
-      name: 'WeChat',
-      flow: 'none',
-      countries: ['CN', 'HK', 'SG', 'JP'],
-      currencies: [
-        'aud',
-        'cad',
-        'eur',
-        'gbp',
-        'hkd',
-        'jpy',
-        'nzd',
-        'sgd',
-        'usd',
-      ],
-    },
+    // eps: {
+    //   name: 'EPS',
+    //   flow: 'redirect',
+    //   countries: ['AT'],
+    //   currencies: ['eur'],
+    // },
+    // ideal: {
+    //   name: 'iDEAL',
+    //   flow: 'redirect',
+    //   countries: ['NL'],
+    //   currencies: ['eur'],
+    // },
+    // giropay: {
+    //   name: 'Giropay',
+    //   flow: 'redirect',
+    //   countries: ['DE'],
+    //   currencies: ['eur'],
+    // },
+    // multibanco: {
+    //   name: 'Multibanco',
+    //   flow: 'receiver',
+    //   countries: ['PT'],
+    //   currencies: ['eur'],
+    // },
+    // sepa_debit: {
+    //   name: 'SEPA Direct Debit',
+    //   flow: 'none',
+    //   countries: [
+    //     'FR',
+    //     'DE',
+    //     'ES',
+    //     'BE',
+    //     'NL',
+    //     'LU',
+    //     'IT',
+    //     'PT',
+    //     'AT',
+    //     'IE',
+    //     'FI',
+    //   ],
+      currencies: ['usd'],
+    // sofort: {
+    //   name: 'SOFORT',
+    //   flow: 'redirect',
+    //   countries: ['DE', 'AT'],
+    //   currencies: ['eur'],
+    // },
+    // wechat: {
+    //   name: 'WeChat',
+    //   flow: 'none',
+    //   countries: ['CN', 'HK', 'SG', 'JP'],
+    //   currencies: [
+    //     'aud',
+    //     'cad',
+    //     'eur',
+    //     'gbp',
+    //     'hkd',
+    //     'jpy',
+    //     'nzd',
+    //     'sgd',
+    //     'usd',
+    //   ],
   };
 
   // Update the main button to reflect the payment method being selected.

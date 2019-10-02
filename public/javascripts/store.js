@@ -159,6 +159,8 @@ class Store {
     await this.loadProducts();
     const orderItems = document.getElementById('order-items');
     const orderTotal = document.getElementById('order-total');
+    // const orderTotal = document.getElementById('ship-subtotal');
+    
     let currency;
     // Build and append the line items to the payment summary.
     for (let [id, product] of Object.entries(this.products)) {
@@ -193,6 +195,7 @@ class Store {
     const total = this.formatPrice(this.getPaymentTotal(), currency);
     orderTotal.querySelector('[data-subtotal]').innerText = total;
     orderTotal.querySelector('[data-total]').innerText = total;
+    // orderTotal.querySelector('[ship-subtotal]').innerText = total;
   }
 }
 
