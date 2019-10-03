@@ -176,7 +176,7 @@ class Store {
       let lineItem = document.createElement('div');
       lineItem.classList.add('line-item');
       lineItem.innerHTML = `
-        <img class="image" src="/images/products/${product.id}.png" alt="${product.name}">
+        <img class="image" src="/images/products/${product.id}.jpg" alt="${product.name}">
         <div class="label">
           <p class="product">${product.name}</p>
           <p class="sku">${Object.values(sku.attributes).join(' ')}</p>

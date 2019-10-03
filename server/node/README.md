@@ -1,55 +1,27 @@
 # Stripe Payments Demo — Node Server
 
-This directory contains the main Node implementation of the payments server.
+This directory contains the main Node implementation of the payments server using Stripe for the project: The Storehouse Chicago.
 
-### Requirements
+### About
 
-You’ll need the following:
 
-- [Node.js](http://nodejs.org) >= 10.x.
-- Modern browser that supports ES6 (Chrome to see the Payment Request, and Safari to see Apple Pay).
-- Stripe account to accept payments ([sign up](https://dashboard.stripe.com/register) for free).
+### Main Project
 
-In your Stripe Dashboard, you can [enable the payment methods](https://dashboard.stripe.com/payments/settings) you’d like to test.
+The main project is The Storehouse Chicago.
 
-Some payment methods require receiving a real-time webhook notification to complete a charge. We're using the [Stripe CLI](https://github.com/stripe/stripe-cli#listen) to forward webhook events to our local development server. Additionally this demo is bundled with [ngrok](https://ngrok.com/), to serve the app locally via HTTPS, which is required for the Payment Request API.
+- Github: https://github.com/daveyjonezz/theStorehouseChicago.git
+- Heroku: https://thestorehousechitown.herokuapp.com/ 
 
-### Running the Node Server
+The Stripe integration is its own seperate deployment that connects via API to the Storehouse Chicago. They run on two seperate servers. This integration functions after you click the cart button on the main project.
 
-Copy the environment variables file from the root of the repository:
+### Credits
 
-    cp .env.example .env
+I used the following Stripe Demo as my boiler plate for The Storehouse Chicago: 
+https://stripe-payments-demo.appspot.com/. It was found on Stripe's main website as a boiler plate to use as you are integrating Stripe for personal use. 
 
-Update `.env` with your own [Stripe API keys](https://dashboard.stripe.com/account/apikeys) and any other configuration details. These environment variables are loaded and used in [`server/node/config.js`](/server/node/config.js), where you can review and edit other options such as the app currency and your Stripe account country.
+- Code for the boiler plate by: [Romain Huet](https://twitter.com/romainhuet) and [Thorsten Schaeff](https://twitter.com/thorwebdev)
 
-Install dependencies using npm:
+- Edited and Configured by: Jenni Birsan (IG: jennibirsan)
 
-    npm install
+- Converted to React by: Jenni Birsan (IG: jennibirsan)
 
-This demo uses the Stripe API as a datastore for products and SKUs, but you can always choose to use your own datastore instead. When starting the app for the first time, the initial loading can take a couple of seconds as it will automatically set up the products and SKUs within Stripe.
-
-If you're seeing any errors regarding the installation of the Stripe CLI, please follow [these installation steps](https://github.com/stripe/stripe-cli#installation).
-
-Run the app locally and start the webhook forwarding:
-
-    npm run dev
-
-The Stripe CLI will let you know that webhook forwarding is ready and output your webhook signing secret:
-
-    > Ready! Your webhook signing secret is whsec_xxx
-
-Please copy the webhook signing secret (`whsec_xxx`) to your `.env` file.
-
-Lastly, you will see the ngrok URL to serve our app via HTTPS. For example:
-
-    https://<example>.ngrok.io
-
-Use this URL in your browser to start the demo.
-
-To start the demo without local webhook forwarding run `npm run start` instead. This command is also used if you deploy this demo to [Glitch](https://glitch.com/) or 
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
-## Credits
-
-- Code: [Romain Huet](https://twitter.com/romainhuet) and [Thorsten Schaeff](https://twitter.com/thorwebdev)
