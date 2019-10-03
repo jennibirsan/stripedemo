@@ -18,25 +18,25 @@ The Stripe integration is its own seperate deployment that connects via API to t
 
 ## Checkout Page
 (this is the main page with an item in the cart)
-![picture](screenshots/mainscreen.png)
+![picture](images/screenshots/mainscreen.png)
 
 ## Entering Info
 (this is the checkout portion where you fill in your shipping/billing info)
-![picture](screenshots/enterinfo.png)
+![picture](images/screenshots/enterinfo.png)
 
 ## Order Placed
 (this is will appear once order is processed successfully)
-![picture](screenshots/ordersuccess.png)
+![picture](images/screenshots/ordersuccess.png)
 
 ## Backend
 (this is will appear on the Stripe backend once a order has been successfully purchased)
-![picture](screenshots/backend1.png)
-![picture](screenshots/backend2.png)
-![picture](screenshots/backend3.png)
+![picture](images/screenshots/backend1.png)
+![picture](images/screenshots/backend2.png)
+![picture](images/screenshots/backend3.png)
 
 ## Receipt
 (a receipt will be sent to your email once you made a purchase)
-![picture](screenshots/receipt.jpeg)
+![picture](images/screenshots/receipt.jpeg)
 
 ### Credits
 
