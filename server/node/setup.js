@@ -15,8 +15,15 @@ stripe.setApiVersion(config.stripe.apiVersion);
 
 // this list of information matches our store's products on Stripe's backend.
 const products = [
+  // {
+  //   id: 'prod_FvZr8YZyO8zdxe',
+  //   name: 'Cropped Hoodie: Storm - Small',
+  //   price: 4000,
+  //   currency: 'usd',
+  //   attributes: {size: 'Small Standard', gender: 'Woman', color: 'Storm'},
+  // },
   {
-    id: 'prod_FvZr8YZyO8zdxe',
+    id: 'storm-test',
     name: 'Cropped Hoodie: Storm - Small',
     price: 4000,
     currency: 'usd',
@@ -113,8 +120,15 @@ const products = [
   //   currency: 'usd',
   //   attributes: {size: 'Medium Standard', gender: 'Unisex', color: 'Peach'},
   // },
+  // {
+  //   id: 'prod_FvZsIrqJRdYWfL',
+  //   name: 'Crewneck Sweatshirt: Peach - Large',
+  //   price: 4000,
+  //   currency: 'usd',
+  //   attributes: {size: 'Large Standard', gender: 'Unisex', color: 'Peach'},
+  // },
   {
-    id: 'prod_FvZsIrqJRdYWfL',
+    id: 'peach-test',
     name: 'Crewneck Sweatshirt: Peach - Large',
     price: 4000,
     currency: 'usd',
@@ -127,8 +141,15 @@ const products = [
   //   currency: 'usd',
   //   attributes: {size: 'X-Large Standard', gender: 'Unisex', color: 'Peach'},
   // },
+  // {
+  //   id: 'prod_FvZkL7s3aiYp5L',
+  //   name: 'Donation - $100',
+  //   price: 10000,
+  //   currency: 'usd',
+  //   attributes: {amount: '$100'},
+  // },
   {
-    id: 'prod_FvZkL7s3aiYp5L',
+    id: 'donation-test',
     name: 'Donation - $100',
     price: 10000,
     currency: 'usd',
