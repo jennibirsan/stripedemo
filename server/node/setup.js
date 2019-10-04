@@ -158,40 +158,40 @@ const products = [
 ];
 
 // Creates a collection of Stripe Products and SKUs to use in your storefront
-const createStoreProducts = async () => {
-  try {
-    const stripeProducts = await Promise.all(
-      products.map(async product => {
-        const stripeProduct = await stripe.products.create({
-          id: product.id,
-          name: product.name,
-          type: 'good',
-          attributes: Object.keys(product.attributes),
-          metadata: product.metadata,
-        });
+// const createStoreProducts = async () => {
+//   try {
+//     const stripeProducts = await Promise.all(
+//       products.map(async product => {
+//         const stripeProduct = await stripe.products.create({
+//           id: product.id,
+//           name: product.name,
+//           type: 'good',
+//           attributes: Object.keys(product.attributes),
+//           metadata: product.metadata,
+//         });
 
-        const stripeSku = await stripe.skus.create({
-          product: stripeProduct.id,
-          price: product.price,
-          currency: config.currency,
-          attributes: product.attributes,
-          inventory: {type: 'infinite'},
-        });
+//         const stripeSku = await stripe.skus.create({
+//           product: stripeProduct.id,
+//           price: product.price,
+//           currency: config.currency,
+//           attributes: product.attributes,
+//           inventory: {type: 'infinite'},
+//         });
 
-        return {stripeProduct, stripeSku};
-      })
-    );
+//         return {stripeProduct, stripeSku};
+//       })
+//     );
 
-    console.log(
-      `🛍️  Successfully created ${
-        stripeProducts.length
-      } products on your Stripe account.`
-    );
-  } catch (error) {
-    console.log(`⚠️  Error: ${error.message}`);
-    return;
-  }
-};
+//     console.log(
+//       `🛍️  Successfully created ${
+//         stripeProducts.length
+//       } products on your Stripe account.`
+//     );
+//   } catch (error) {
+//     console.log(`⚠️  Error: ${error.message}`);
+//     return;
+//   }
+// };
 
 // Set up the Stripe CLI.
 // https://github.com/stripe/stripe-cli
@@ -216,4 +216,4 @@ const writeCLIConfig = async () => {
 };
 
 writeCLIConfig();
-createStoreProducts();
+// createStoreProducts();
