@@ -8,7 +8,7 @@ The main project is The Storehouse - Chicago.
 
 - Github: https://github.com/daveyjonezz/theStorehouseChicago.git
 - Heroku: https://thestorehousechitown.herokuapp.com/ 
-- Stripe Heroku: 
+- Stripe NGROK: https://935fd40a.ngrok.io/
 
 The Stripe integration is its own seperate deployment that connects via API to the Storehouse Chicago. They run on two seperate servers. This integration functions after you click the cart button on the main project.
 
