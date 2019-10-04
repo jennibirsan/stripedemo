@@ -167,7 +167,7 @@ class Store {
       const randomQuantity = (min, max) => {
         min = Math.ceil(min);
         max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min + 1)) + min;
+        return Math.floor(Math.random() * (max - min + 0)) + min;
       };
       const quantity = randomQuantity(1, 2);
       let sku = product.skus.data[0];

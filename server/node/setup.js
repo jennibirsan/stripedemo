@@ -13,20 +13,20 @@ stripe.setApiVersion(config.stripe.apiVersion);
 
 // this list of information matches our store's products on Stripe's backend.
 const products = [
-  // {
-  //   id: 'prod_FvRAhf6voHTTF1',
-  //   name: 'Cropped Hoodie: Storm - Small',
-  //   price: 4000,
-  //   currency: 'usd',
-  //   attributes: {size: 'Small Standard', gender: 'Woman', color: 'Storm'},
-  // },
   {
-    id: 'prod_FvRAoznlX8LaIp',
-    name: 'Cropped Hoodie: Storm - Medium',
+    id: 'prod_FvZr8YZyO8zdxe',
+    name: 'Cropped Hoodie: Storm - Small',
     price: 4000,
     currency: 'usd',
-    attributes: {size: 'Medium Standard', gender: 'Woman', color: 'Storm'},
+    attributes: {size: 'Small Standard', gender: 'Woman', color: 'Storm'},
   },
+  // {
+  //   id: 'prod_FvRAoznlX8LaIp',
+  //   name: 'Cropped Hoodie: Storm - Medium',
+  //   price: 4000,
+  //   currency: 'usd',
+  //   attributes: {size: 'Medium Standard', gender: 'Woman', color: 'Storm'},
+  // },
   // {
   //   id: 'prod_FvRBN1XgItpT9Q',
   //   name: 'Cropped Hoodie: Storm - Large',
@@ -41,13 +41,13 @@ const products = [
   //   currency: 'usd',
   //   attributes: {size: 'X-Large Standard', gender: 'Woman', color: 'Storm'},
   // },
-  {
-    id: 'prod_Fv5LZy8F2kVjXz',
-    name: 'Cropped Hoodie: Heather Dust - Small',
-    price: 4000,
-    currency: 'usd',
-    attributes: {size: 'Small Standard', gender: 'Woman', color: 'Heather Dust'},
-  },
+  // {
+  //   id: 'prod_Fv5LZy8F2kVjXz',
+  //   name: 'Cropped Hoodie: Heather Dust - Small',
+  //   price: 4000,
+  //   currency: 'usd',
+  //   attributes: {size: 'Small Standard', gender: 'Woman', color: 'Heather Dust'},
+  // },
   // {
   //   id: 'prod_FvR8VH1ZFbmCIm',
   //   name: 'Cropped Hoodie: Heather Dust - Medium',
@@ -83,13 +83,13 @@ const products = [
   //   currency: 'usd',
   //   attributes: {size: 'Medium Standard', gender: 'Unisex', color: 'White'},
   // },
-  {
-    id: 'prod_FvRD1UgaxJCsga',
-    name: 'Crewneck Sweatshirt: White - Large',
-    price: 4000,
-    currency: 'usd',
-    attributes: {size: 'Large Standard', gender: 'Unisex', color: 'White'},
-  },
+  // {
+  //   id: 'prod_FvRD1UgaxJCsga',
+  //   name: 'Crewneck Sweatshirt: White - Large',
+  //   price: 4000,
+  //   currency: 'usd',
+  //   attributes: {size: 'Large Standard', gender: 'Unisex', color: 'White'},
+  // },
   // {
   //   id: 'prod_FvREggY6FIgr2X',
   //   name: 'Crewneck Sweatshirt: White - X-Large',
@@ -111,19 +111,26 @@ const products = [
   //   currency: 'usd',
   //   attributes: {size: 'Medium Standard', gender: 'Unisex', color: 'Peach'},
   // },
-  // {
-  //   id: 'prod_FvRFiv4QMnrv7m',
-  //   name: 'Crewneck Sweatshirt: Peach - Large',
-  //   price: 4000,
-  //   currency: 'usd',
-  //   attributes: {size: 'Large Standard', gender: 'Unisex', color: 'Peach'},
-  // },
   {
-    id: 'prod_FvRFSa5FJE4ZdX',
-    name: 'Crewneck Sweatshirt: Peach - X-Large',
+    id: 'prod_FvZsIrqJRdYWfL',
+    name: 'Crewneck Sweatshirt: Peach - Large',
     price: 4000,
     currency: 'usd',
-    attributes: {size: 'X-Large Standard', gender: 'Unisex', color: 'Peach'},
+    attributes: {size: 'Large Standard', gender: 'Unisex', color: 'Peach'},
+  },
+  // {
+  //   id: 'prod_FvRFSa5FJE4ZdX',
+  //   name: 'Crewneck Sweatshirt: Peach - X-Large',
+  //   price: 4000,
+  //   currency: 'usd',
+  //   attributes: {size: 'X-Large Standard', gender: 'Unisex', color: 'Peach'},
+  // },
+  {
+    id: 'prod_FvZkL7s3aiYp5L',
+    name: 'Donation - $100',
+    price: 10000,
+    currency: 'usd',
+    attributes: {amount: '$100'},
   },
 ];
 
