@@ -27,6 +27,11 @@
         "Your Stripe secret key. Find it here in your Dashboard: https://dashboard.stripe.com/account/apikeys",
       "required": true
     },
+    "STRIPE_RESTRICTED_KEY": {
+      "description":
+        "Your Stripe CLI restricted key. Find it here in your Dashboard: https://dashboard.stripe.com/account/apikeys",
+      "required": true
+    },
     "STRIPE_WEBHOOK_SECRET": {
       "description":
         "Your webhook secret to verify signatures. Find it here in your Dashboard: https://dashboard.stripe.com/account/webhooks",

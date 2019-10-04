@@ -178,7 +178,7 @@ const writeCLIConfig = async () => {
   const stripeCLIConfig = `
 [stripe-payments-demo]
   device_name = "stripe-payments-demo"
-  secret_key = "${config.stripe.cliKey}"
+  restricted_key = "${config.stripe.cliKey}"
 `;
 
   if (!fs.existsSync(configFilePath)) {
