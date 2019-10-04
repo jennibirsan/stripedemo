@@ -8,7 +8,7 @@
 
 const fs = require('fs');
 const config = require('./config');
-const stripe = require('stripe')(config.stripe.secretKey);
+const stripe = require('stripe')(config.stripe.cliKey);
 // const stripe = require("stripe")("rk_test_fCG7ylYDJhcq9K7OL1wIlaLT00Llox0zyJ");
 stripe.setApiVersion(config.stripe.apiVersion);
 
@@ -178,7 +178,7 @@ const writeCLIConfig = async () => {
   const stripeCLIConfig = `
 [stripe-payments-demo]
   device_name = "stripe-payments-demo"
-  secret_key = "${config.stripe.secretKey}"
+  secret_key = "${config.stripe.cliKey}"
 `;
 
   if (!fs.existsSync(configFilePath)) {

@@ -45,6 +45,8 @@ module.exports = {
     // For non-card payments like iDEAL, live keys will redirect to real banking sites.
     publishableKey: process.env.STRIPE_PUBLISHABLE_KEY,
     secretKey: process.env.STRIPE_SECRET_KEY,
+    // JB ADDED CLI KEY
+    cliKey: process.env.STRIPE_RESTRICTED_KEY,
     // Setting the webhook secret is good practice in order to verify signatures.
     // After creating a webhook, click to reveal details and find your signing secret.
     webhookSecret: process.env.STRIPE_WEBHOOK_SECRET,
