@@ -28,8 +28,7 @@
     "stripe": "^6.28.0"
   },
   "devDependencies": {
-    "@types/faker": "^4.1.5",
-    "ngrok": "^3.2.3"
+    "@types/faker": "^4.1.5"
   },
   "bugs": {
     "url": "https://github.com/stripe/stripe-payments-demo/issues"
