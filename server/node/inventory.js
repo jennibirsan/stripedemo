@@ -1,8 +1,6 @@
 /**
  * inventory.js
- * Stripe Payments Demo. Created by Romain Huet (@romainhuet)
- * and Thorsten Schaeff (@thorwebdev).
- *
+ 
  * Simple library to store and interact with products stored on Stripe.
  * These methods are using the Stripe Products API, but we tried to abstract them
  * from the main code if you'd like to use your own product management system instead.
