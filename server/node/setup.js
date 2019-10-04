@@ -6,7 +6,7 @@
 
 'use strict';
 
-// const fs = require('fs');
+const fs = require('fs');
 const config = require('./config');
 // const stripe = require('stripe');
 const stripe = require('stripe')(config.stripe.secretKey);
