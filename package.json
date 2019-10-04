@@ -20,12 +20,13 @@
     "postinstall": "npm run setup-products && brew install stripe/stripe-cli/stripe"
   },
   "dependencies": {
-    "body-parser": "^1.17.1",
+    "body-parser": "^1.19.0",
     "dotenv": "^4.0.0",
     "ejs": "^2.5.7",
-    "express": "^4.15.2",
+    "express": "^4.17.1",
     "morgan": "^1.9.1",
-    "stripe": "^6.28.0"
+    "pug": "^2.0.4",
+    "stripe": "^6.36.0"
   },
   "devDependencies": {
     "@types/faker": "^4.1.5"
