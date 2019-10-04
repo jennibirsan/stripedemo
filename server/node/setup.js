@@ -1,8 +1,5 @@
 /**
  * setup.js
- * Stripe Payments Demo. Created by Romain Huet (@romainhuet)
- * and Thorsten Schaeff (@thorwebdev).
- *
  * This is a one-time setup script for your server. It creates a set of fixtures,
  * namely products and SKUs, that are used to create a random basket session.
  */
@@ -14,36 +11,36 @@ const config = require('./config');
 const stripe = require('stripe')(config.stripe.secretKey);
 stripe.setApiVersion(config.stripe.apiVersion);
 
-// Replace this list with information about your store's products.
+// this list of information matches our store's products on Stripe's backend.
 const products = [
+  // {
+  //   id: 'prod_FvRAhf6voHTTF1',
+  //   name: 'Cropped Hoodie: Storm - Small',
+  //   price: 4000,
+  //   currency: 'usd',
+  //   attributes: {size: 'Small Standard', gender: 'Woman', color: 'Storm'},
+  // },
   {
-    id: '',
-    name: 'Cropped Hoodie',
-    price: 4000,
-    currency: 'usd',
-    attributes: {size: 'Small Standard', gender: 'Woman', color: 'Storm'},
-  },
-  {
-    id: 'stormcropped',
-    name: 'Cropped Hoodie',
+    id: 'prod_FvRAoznlX8LaIp',
+    name: 'Cropped Hoodie: Storm - Medium',
     price: 4000,
     currency: 'usd',
     attributes: {size: 'Medium Standard', gender: 'Woman', color: 'Storm'},
   },
-  {
-    id: 'stormcropped',
-    name: 'Cropped Hoodie',
-    price: 4000,
-    currency: 'usd',
-    attributes: {size: 'Large Standard', gender: 'Woman', color: 'Storm'},
-  },
-  {
-    id: 'stormcropped',
-    name: 'Cropped Hoodie',
-    price: 4000,
-    currency: 'usd',
-    attributes: {size: 'X-Large Standard', gender: 'Woman', color: 'Storm'},
-  },
+  // {
+  //   id: 'prod_FvRBN1XgItpT9Q',
+  //   name: 'Cropped Hoodie: Storm - Large',
+  //   price: 4000,
+  //   currency: 'usd',
+  //   attributes: {size: 'Large Standard', gender: 'Woman', color: 'Storm'},
+  // },
+  // {
+  //   id: 'prod_FvRBiMCUvBVJaU',
+  //   name: 'Cropped Hoodie: Storm - X-Large',
+  //   price: 4000,
+  //   currency: 'usd',
+  //   attributes: {size: 'X-Large Standard', gender: 'Woman', color: 'Storm'},
+  // },
   {
     id: 'prod_Fv5LZy8F2kVjXz',
     name: 'Cropped Hoodie: Heather Dust - Small',
@@ -51,79 +48,79 @@ const products = [
     currency: 'usd',
     attributes: {size: 'Small Standard', gender: 'Woman', color: 'Heather Dust'},
   },
+  // {
+  //   id: 'prod_FvR8VH1ZFbmCIm',
+  //   name: 'Cropped Hoodie: Heather Dust - Medium',
+  //   price: 4000,
+  //   currency: 'usd',
+  //   attributes: {size: 'Medium Standard', gender: 'Woman', color: 'Heather Dust'},
+  // },
+  // {
+  //   id: 'prod_FvR9vYXL9lqjys',
+  //   name: 'Cropped Hoodie: Heather Dust - Large',
+  //   price: 4000,
+  //   currency: 'usd',
+  //   attributes: {size: 'Large Standard', gender: 'Woman', color: 'Heather Dust'},
+  // },
+  // {
+  //   id: 'prod_FvR9bfTCVfT0MC',
+  //   name: 'Cropped Hoodie: Heather Dust - X-Large',
+  //   price: 4000,
+  //   currency: 'usd',
+  //   attributes: {size: 'X-Large Standard', gender: 'Woman', color: 'Heather Dust'},
+  // },
+  // {
+  //   id: 'prod_FvRCXAX9oHeBeS',
+  //   name: 'Crewneck Sweatshirt: White - Small',
+  //   price: 4000,
+  //   currency: 'usd',
+  //   attributes: {size: 'Small Standard', gender: 'Unisex', color: 'White'},
+  // },
+  // {
+  //   id: 'prod_FvRDlRND1kcTvp',
+  //   name: 'Crewneck Sweatshirt: White - Medium',
+  //   price: 4000,
+  //   currency: 'usd',
+  //   attributes: {size: 'Medium Standard', gender: 'Unisex', color: 'White'},
+  // },
   {
-    id: 'heatherdustcropped',
-    name: 'Cropped Hoodie: Heather Dust - Medium',
-    price: 4000,
-    currency: 'usd',
-    attributes: {size: 'Medium Standard', gender: 'Woman', color: 'Heather Dust'},
-  },
-  {
-    id: 'heatherdustcropped',
-    name: 'Cropped Hoodie: Heather Dust - Large',
-    price: 4000,
-    currency: 'usd',
-    attributes: {size: 'Large Standard', gender: 'Woman', color: 'Heather Dust'},
-  },
-  {
-    id: 'heatherdustcropped',
-    name: 'Cropped Hoodie: Heather Dust - X-Large',
-    price: 4000,
-    currency: 'usd',
-    attributes: {size: 'X-Large Standard', gender: 'Woman', color: 'Heather Dust'},
-  },
-  {
-    id: 'whitecrewneck',
-    name: 'Crewneck Sweatshirt',
-    price: 4000,
-    currency: 'usd',
-    attributes: {size: 'Small Standard', gender: 'Unisex', color: 'White'},
-  },
-  {
-    id: 'whitecrewneck',
-    name: 'Crewneck Sweatshirt',
-    price: 4000,
-    currency: 'usd',
-    attributes: {size: 'Medium Standard', gender: 'Unisex', color: 'White'},
-  },
-  {
-    id: 'whitecrewneck',
-    name: 'Crewneck Sweatshirt',
+    id: 'prod_FvRD1UgaxJCsga',
+    name: 'Crewneck Sweatshirt: White - Large',
     price: 4000,
     currency: 'usd',
     attributes: {size: 'Large Standard', gender: 'Unisex', color: 'White'},
   },
+  // {
+  //   id: 'prod_FvREggY6FIgr2X',
+  //   name: 'Crewneck Sweatshirt: White - X-Large',
+  //   price: 4000,
+  //   currency: 'usd',
+  //   attributes: {size: 'X-Large Standard', gender: 'Unisex', color: 'White'},
+  // },
+  // {
+  //   id: 'prod_FvRE6lOo6MYncj',
+  //   name: 'Crewneck Sweatshirt: Peach - Small',
+  //   price: 4000,
+  //   currency: 'usd',
+  //   attributes: {size: 'Small Standard', gender: 'Unisex', color: 'Peach'},
+  // },
+  // {
+  //   id: 'prod_FvRFHXrUC61STL',
+  //   name: 'Crewneck Sweatshirt: Peach - Medium',
+  //   price: 4000,
+  //   currency: 'usd',
+  //   attributes: {size: 'Medium Standard', gender: 'Unisex', color: 'Peach'},
+  // },
+  // {
+  //   id: 'prod_FvRFiv4QMnrv7m',
+  //   name: 'Crewneck Sweatshirt: Peach - Large',
+  //   price: 4000,
+  //   currency: 'usd',
+  //   attributes: {size: 'Large Standard', gender: 'Unisex', color: 'Peach'},
+  // },
   {
-    id: 'whitecrewneck',
-    name: 'Crewneck Sweatshirt',
-    price: 4000,
-    currency: 'usd',
-    attributes: {size: 'X-Large Standard', gender: 'Unisex', color: 'White'},
-  },
-  {
-    id: 'peachcrewneck',
-    name: 'Crewneck Sweatshirt',
-    price: 4000,
-    currency: 'usd',
-    attributes: {size: 'Small Standard', gender: 'Unisex', color: 'Peach'},
-  },
-  {
-    id: 'peachcrewneck',
-    name: 'Crewneck Sweatshirt',
-    price: 4000,
-    currency: 'usd',
-    attributes: {size: 'Medium Standard', gender: 'Unisex', color: 'Peach'},
-  },
-  {
-    id: 'peachcrewneck',
-    name: 'Crewneck Sweatshirt',
-    price: 4000,
-    currency: 'usd',
-    attributes: {size: 'Large Standard', gender: 'Unisex', color: 'Peach'},
-  },
-  {
-    id: 'peachcrewneck',
-    name: 'Crewneck Sweatshirt',
+    id: 'prod_FvRFSa5FJE4ZdX',
+    name: 'Crewneck Sweatshirt: Peach - X-Large',
     price: 4000,
     currency: 'usd',
     attributes: {size: 'X-Large Standard', gender: 'Unisex', color: 'Peach'},
