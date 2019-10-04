@@ -8,9 +8,9 @@
 
 // const fs = require('fs');
 const config = require('./config');
-// const stripe = require('stripe')(config.stripe.secretKey);
+const stripe = require('stripe')(config.stripe.secretKey);
 // const stripe = require("stripe")("rk_test_fCG7ylYDJhcq9K7OL1wIlaLT00Llox0zyJ");
-// stripe.setApiVersion(config.stripe.apiVersion);
+stripe.setApiVersion(config.stripe.apiVersion);
 
 // this list of information matches our store's products on Stripe's backend.
 const products = [
