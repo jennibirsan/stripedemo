@@ -25,7 +25,8 @@
     "ejs": "^2.5.7",
     "express": "^4.15.2",
     "morgan": "^1.9.1",
-    "stripe": "^6.28.0"
+    "stripe": "^6.28.0",
+    "stripe-cli": "^0.1.0"
   },
   "devDependencies": {
     "@types/faker": "^4.1.5"
