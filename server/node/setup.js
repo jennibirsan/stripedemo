@@ -158,17 +158,17 @@ const products = [
 ];
 
 // Creates a collection of Stripe Products and SKUs to use in your storefront
-const createStoreProducts = async () => {
-  try {
-    const stripeProducts = await Promise.all(
-      products.map(async product => {
-        const stripeProduct = await stripe.products.create({
-          id: product.id,
-          name: product.name,
-          type: 'good',
-          attributes: Object.keys(product.attributes),
-          metadata: product.metadata,
-        });
+// const createStoreProducts = async () => {
+//   try {
+//     const stripeProducts = await Promise.all(
+//       products.map(async product => {
+//         const stripeProduct = await stripe.products.create({
+//           id: product.id,
+//           name: product.name,
+//           type: 'good',
+//           attributes: Object.keys(product.attributes),
+//           metadata: product.metadata,
+//         });
 
 //         const stripeSku = await stripe.skus.create({
 //           product: stripeProduct.id,
@@ -216,4 +216,4 @@ const writeCLIConfig = async () => {
 };
 
 writeCLIConfig();
-createStoreProducts();
+// createStoreProducts();
