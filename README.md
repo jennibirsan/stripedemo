@@ -8,9 +8,9 @@ The main project is The Storehouse - Chicago.
 
 - Github: https://github.com/daveyjonezz/theStorehouseChicago.git
 - Heroku: https://thestorehousechitown.herokuapp.com/ 
-- Stripe NGROK: https://935fd40a.ngrok.io/
+- Stripe Heroku:
 
-The Stripe integration is its own seperate deployment that connects via API to the Storehouse Chicago. They run on two seperate servers. This integration functions after you click the cart button on the main project.
+The Stripe integration is its own seperate deployment that connects via API to the Storehouse Chicago. They run on two seperate servers. This integration functions after you click the cart button on the main project. 
 
 ### About
 
@@ -46,5 +46,3 @@ https://stripe-payments-demo.appspot.com/. It was found on Stripe's main website
 - Code for the boiler plate by: [Romain Huet](https://twitter.com/romainhuet) and [Thorsten Schaeff](https://twitter.com/thorwebdev)
 
 - Edited and Configured by: Jenni Birsan (IG: jennibirsan)
-
-- Converted to React by: Jenni Birsan (IG: jennibirsan)
