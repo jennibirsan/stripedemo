@@ -16,8 +16,8 @@
     "start": "node server/node/server.js",
     "dev": "node server/node/server.js & npm run webhook",
     "setup-products": "node server/node/setup.js",
-    "webhook": "stripe listen --project-name=stripe-payments-demo --forward-to http://localhost:8000/webhook",
-    "postinstall": "npm run setup-products && brew install stripe/stripe-cli/stripe"
+    "webhook": "stripe listen --project-name=stripe-payments-demo --forward-to http://localhost:8000/webhook"
+
   },
   "dependencies": {
     "body-parser": "^1.19.0",
