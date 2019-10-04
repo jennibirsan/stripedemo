@@ -15,20 +15,20 @@ stripe.setApiVersion(config.stripe.apiVersion);
 
 // this list of information matches our store's products on Stripe's backend.
 const products = [
-  // {
-  //   id: 'prod_FvZr8YZyO8zdxe',
-  //   name: 'Cropped Hoodie: Storm - Small',
-  //   price: 4000,
-  //   currency: 'usd',
-  //   attributes: {size: 'Small Standard', gender: 'Woman', color: 'Storm'},
-  // },
   {
-    id: 'storm-test',
+    id: 'prod_FvZr8YZyO8zdxe',
     name: 'Cropped Hoodie: Storm - Small',
     price: 4000,
     currency: 'usd',
     attributes: {size: 'Small Standard', gender: 'Woman', color: 'Storm'},
   },
+  // {
+  //   id: 'storm-test',
+  //   name: 'Cropped Hoodie: Storm - Small',
+  //   price: 4000,
+  //   currency: 'usd',
+  //   attributes: {size: 'Small Standard', gender: 'Woman', color: 'Storm'},
+  // },
   // {
   //   id: 'prod_FvRAoznlX8LaIp',
   //   name: 'Cropped Hoodie: Storm - Medium',
@@ -120,20 +120,20 @@ const products = [
   //   currency: 'usd',
   //   attributes: {size: 'Medium Standard', gender: 'Unisex', color: 'Peach'},
   // },
-  // {
-  //   id: 'prod_FvZsIrqJRdYWfL',
-  //   name: 'Crewneck Sweatshirt: Peach - Large',
-  //   price: 4000,
-  //   currency: 'usd',
-  //   attributes: {size: 'Large Standard', gender: 'Unisex', color: 'Peach'},
-  // },
   {
-    id: 'peach-test',
+    id: 'prod_FvZsIrqJRdYWfL',
     name: 'Crewneck Sweatshirt: Peach - Large',
     price: 4000,
     currency: 'usd',
     attributes: {size: 'Large Standard', gender: 'Unisex', color: 'Peach'},
   },
+  // {
+  //   id: 'peach-test',
+  //   name: 'Crewneck Sweatshirt: Peach - Large',
+  //   price: 4000,
+  //   currency: 'usd',
+  //   attributes: {size: 'Large Standard', gender: 'Unisex', color: 'Peach'},
+  // },
   // {
   //   id: 'prod_FvRFSa5FJE4ZdX',
   //   name: 'Crewneck Sweatshirt: Peach - X-Large',
@@ -141,20 +141,20 @@ const products = [
   //   currency: 'usd',
   //   attributes: {size: 'X-Large Standard', gender: 'Unisex', color: 'Peach'},
   // },
-  // {
-  //   id: 'prod_FvZkL7s3aiYp5L',
-  //   name: 'Donation - $100',
-  //   price: 10000,
-  //   currency: 'usd',
-  //   attributes: {amount: '$100'},
-  // },
   {
-    id: 'donation-test',
+    id: 'prod_FvZkL7s3aiYp5L',
     name: 'Donation - $100',
     price: 10000,
     currency: 'usd',
     attributes: {amount: '$100'},
   },
+  // {
+  //   id: 'donation-test',
+  //   name: 'Donation - $100',
+  //   price: 10000,
+  //   currency: 'usd',
+  //   attributes: {amount: '$100'},
+  // },
 ];
 
 // Creates a collection of Stripe Products and SKUs to use in your storefront
