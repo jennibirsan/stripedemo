@@ -4,7 +4,7 @@ This directory contains the main Node implementation of the payments server usin
 
 ### Main Project
 
-The main project is The Storehouse Chicago.
+The main project is The Storehouse - Chicago.
 
 - Github: https://github.com/daveyjonezz/theStorehouseChicago.git
 - Heroku: https://thestorehousechitown.herokuapp.com/ 
