@@ -6,7 +6,7 @@
 
 'use strict';
 
-const fs = require('fs');
+// const fs = require('fs');
 const config = require('./config');
 // const stripe = require('stripe')(config.stripe.secretKey);
 // const stripe = require("stripe")("rk_test_fCG7ylYDJhcq9K7OL1wIlaLT00Llox0zyJ");
@@ -194,4 +194,4 @@ const createStoreProducts = async () => {
 // };
 
 // writeCLIConfig();
-// createStoreProducts();
+createStoreProducts();
