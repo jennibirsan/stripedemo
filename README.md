@@ -36,7 +36,7 @@ To Test: Enter all shipping/billing information or you can click "generate" at t
 
 ## Receipt
 (a receipt will be sent to your email once you made a purchase)
-![picture](public/images/screenshots/receipt.jpeg)
+![picture](public/images/screenshots/receipt.png)
 
 ### Credits
 
